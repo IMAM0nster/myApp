@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Class-Path: hsqldb-2.3.5.jar spring-aop-4.3.13.RELEASE.jar spring-web-
+ 4.3.13.RELEASE.jar classmate-1.3.4.jar spring-boot-autoconfigure-1.5.
+ 9.RELEASE.jar springfox-swagger2-2.2.2.jar spring-expression-4.3.13.R
+ ELEASE.jar springfox-swagger-common-2.2.2.jar validation-api-1.1.0.Fi
+ nal.jar mybatis-3.4.0.jar logback-classic-1.1.11.jar spring-plugin-me
+ tadata-1.2.0.RELEASE.jar spring-boot-starter-1.5.9.RELEASE.jar spring
+ -plugin-core-1.2.0.RELEASE.jar spring-beans-4.3.13.RELEASE.jar common
+ s-beanutils-1.9.3.jar spring-hateoas-0.23.0.RELEASE.jar log4j-over-sl
+ f4j-1.7.25.jar jul-to-slf4j-1.7.25.jar springfox-core-2.2.2.jar sprin
+ g-tx-4.3.13.RELEASE.jar aspectjrt-1.8.13.jar jcl-over-slf4j-1.7.25.ja
+ r jboss-logging-3.3.1.Final.jar spring-boot-starter-thymeleaf-1.5.9.R
+ ELEASE.jar tomcat-embed-el-8.5.23.jar groovy-2.4.13.jar springfox-swa
+ gger-ui-2.2.2.jar swagger-models-1.5.3.jar javassist-3.21.0-GA.jar to
+ mcat-annotations-api-8.5.23.jar aspectjweaver-1.8.13.jar mongodb-driv
+ er-3.2.2.jar thymeleaf-spring4-2.1.6.RELEASE.jar springfox-spi-2.2.2.
+ jar spring-boot-starter-web-1.5.9.RELEASE.jar mongodb-driver-core-3.2
+ .2.jar bson-3.2.2.jar mapstruct-1.0.0.CR1.jar spring-boot-1.5.9.RELEA
+ SE.jar tomcat-juli-8.5.23.jar shiro-spring-1.3.2.jar thymeleaf-2.1.6.
+ RELEASE.jar mybatis-spring-boot-autoconfigure-1.1.1.jar spring-jdbc-4
+ .3.13.RELEASE.jar hibernate-validator-5.3.6.Final.jar swagger-annotat
+ ions-1.5.3.jar spring-boot-starter-tomcat-1.5.9.RELEASE.jar spring-co
+ ntext-4.3.13.RELEASE.jar tomcat-jdbc-8.5.23.jar springfox-schema-2.2.
+ 2.jar shiro-web-1.3.2.jar spring-boot-starter-logging-1.5.9.RELEASE.j
+ ar slf4j-api-1.7.25.jar mysql-connector-java-5.1.44.jar shiro-core-1.
+ 3.2.jar spring-core-4.3.13.RELEASE.jar unbescape-1.1.0.RELEASE.jar co
+ mmons-collections-3.2.2.jar spring-webmvc-4.3.13.RELEASE.jar spring-b
+ oot-devtools-1.5.9.RELEASE.jar spring-boot-starter-jdbc-1.5.9.RELEASE
+ .jar logback-core-1.1.11.jar jackson-annotations-2.8.0.jar snakeyaml-
+ 1.17.jar tomcat-embed-core-8.5.23.jar guava-18.0.jar mybatis-spring-1
+ .3.0.jar jackson-databind-2.8.10.jar thymeleaf-layout-dialect-1.4.0.j
+ ar tomcat-embed-websocket-8.5.23.jar mybatis-spring-boot-starter-1.1.
+ 1.jar ognl-3.0.8.jar jackson-core-2.8.10.jar mongo-java-driver-3.2.2.
+ jar springfox-spring-web-2.2.2.jar
+Main-Class: com.example.demo.DemoApplication
+

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Cyrus Studio</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="assets/animate/animate.css" />
+<link rel="stylesheet" href="assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand" href="#home"><img src="images/logo.png" alt="logo"></a>
+              <!-- #Logo Ends -->
+
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                 <li class="active"><a href="#works">主页</a></li>
+                 <li ><a href="#about">功能简介</a></li>
+                 <li ><a href="#partners">技术栈</a></li>
+                 <li ><a href="#contact">照片上传</a></li>
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- #Header Starts -->
+
+
+
+
+
+
+
+<!-- works -->
+<div ng-app="works" ng-controller="showWorks" id="works"  class=" clearfix grid">
+    <figure class="effect-oscar  wowload fadeInUp" ng-repeat="work in myworks">
+        <img ng-src="{{'/file/download?fileName='+work.author+'_'+work.name}}" alt="img01"/>
+        <figcaption>
+            <h4>{{work.name}}——{{work.author}}</h4>
+            <p>{{work.description}}<a ng-href="{{'/toEdit?id='+work.id}}"><b>编辑</b></a>
+                <br>
+            <a ng-href="{{'/file/download?fileName='+work.author+'_'+work.name}}" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/2.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Events</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/3.jpg" alt="img01"/>
+        <figcaption>
+            <h2>music</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/3.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/4.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Vintage</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/5.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Typers</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+     
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/6.jpg" alt="img01"/>
+        <figcaption>
+            <h2>hotel</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/7.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Chinese</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/7.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/8.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Dicrap</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/8.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/9.jpg" alt="img01"/>
+        <figcaption>
+            <h2>Coffee</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/9.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/10.jpg" alt="img01"/>
+        <figcaption>
+            <h2>cameras</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/10.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/11.jpg" alt="img01"/>
+        <figcaption>
+            <h2>design</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/11.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/12.jpg" alt="img01"/>
+        <figcaption>
+            <h2>studio</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/12.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>
+    </figure>
+    
+
+     
+</div>
+<!-- works -->
+
+
+
+
+
+
+<!-- Cirlce Starts -->
+<div id="about"  class="container spacer about">
+<h2 class="text-center wowload fadeInUp">相册应用</h2>
+  <div class="row">
+  <div class="col-sm-6 wowload fadeInLeft">
+    <h4><i class="fa fa-paint-brush"></i> 照片/画作/设计图</h4>
+    <p>上传你的照片<br/>
+    分享你的生活<br/>
+    晒出你的工作<br/>
+    点击view more 欣赏高清大图</p>
+    
+
+  </div>
+  <div class="col-sm-6 wowload fadeInRight">
+  <h4><i class="fa fa-code"></i> 极简主义</h4>
+  <p>仅支持 照片和文字的上传<br/>
+  不支持点赞评价（不接受批评！）</p>
+  </div>
+  </div>
+
+  <div class="process">
+  <h3 class="text-center wowload fadeInUp">Process</h3>
+  <ul class="row text-center list-inline  wowload bounceInUp">
+      <li>
+            <span><i class="fa fa-history"></i><b>Research</b></span>
+        </li>
+        <li>
+            <span><i class="fa fa-puzzle-piece"></i><b>Plan</b></span>
+        </li>
+        <li>
+            <span><i class="fa fa-database"></i><b>Develop</b></span>
+        </li>
+        <li>
+            <span><i class="fa fa-magic"></i><b>Integration</b></span>
+        </li>        
+        <li>
+            <span><i class="fa fa-cloud-upload"></i><b>Deliver</b></span>
+        </li>
+    </ul>
+  </div>
+</div>
+<!-- #Cirlce Ends -->
+
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+
+<!-- About Starts -->
+<div class="highlight-info">
+<div class="overlay spacer">
+<div class="container">
+<div class="row text-center  wowload fadeInDownBig">
+  <div class="col-sm-3 col-xs-6">
+  <i class="fa fa-smile-o  fa-5x"></i><h4>24 Clients</h4>
+  </div>
+  <div class="col-sm-3 col-xs-6">
+  <i class="fa fa-rocket  fa-5x"></i><h4>75 Projects</h4>
+  </div>
+  <div class="col-sm-3 col-xs-6">
+  <i class="fa fa-cloud-download  fa-5x"></i><h4>454 Downloads</h4>
+  </div>
+  <div class="col-sm-3 col-xs-6">
+  <i class="fa fa-map-marker fa-5x"></i><h4>2 Offices</h4>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- About Ends -->
+
+
+
+
+
+
+
+<div id="partners" class="container spacer ">
+	<h2 class="text-center  wowload fadeInUp">技术栈</h2>
+  <div class="clearfix">
+    <div class="col-sm-6 partners  wowload fadeInLeft">
+         <img src="images/partners/1.JPG" alt="partners">
+         <img src="images/partners/2.JPG" alt="partners">
+         <img src="images/partners/3.JPG" alt="partners">
+         <img src="images/partners/4.JPG" alt="partners">
+    </div>
+    <div class="col-sm-6">
+
+
+    <div id="carousel-testimonials" class="carousel slide testimonails  wowload fadeInRight" data-ride="carousel">
+    <div class="carousel-inner">  
+      <div class="item active animated bounceInRight row">
+      <div class="animated slideInLeft col-xs-2"><img alt="portfolio" src="images/team/1.jpg" width="100" class="img-circle img-responsive"></div>
+      <div  class="col-xs-10">
+      <p>spring boot和mybatis以及hsql集成在一起,实现最基本的作品的增删改查功能。<br/>
+      spring mvc 提供RESTful APi</p>
+      <span>O/R 映射 &amp; MVC - <b>MyBatis &amp; Spring boot</b></span>
+      </div>
+      </div>
+      <div class="item  animated bounceInRight row">
+      <div class="animated slideInLeft col-xs-2"><img alt="portfolio" src="images/team/1.jpg" width="100" class="img-circle img-responsive"></div>
+      <div  class="col-xs-10">
+      <p>除<b>访问主页，获取所有作品数据</b>之外所有的操作必须先登陆<br/>
+      登陆之后可以执行<b>添加作品</b>操作<br/>
+      可以对自己的作品进行修改和删除操作<br/>
+          管理员可以执行所有的修改和删除操作。
+      </p>
+      <span>鉴权策略 - <b>Shiro</b></span>
+      </div>
+      </div>
+      <div class="item  animated bounceInRight row">
+      <div class="animated slideInLeft  col-xs-2"><img alt="portfolio" src="images/team/1.jpg" width="100" class="img-circle img-responsive"></div>
+      <div  class="col-xs-10">
+      <p> <b>mongodb</b>：nosql，用于保存图片<br/>
+          <b>swagger</b>：帮助设计文档和接口api<br/>
+          <b>bootstrap</b>：构建响应式网站<br/>
+          <b>shiro</b>:提供最简单的权限管理<br/>
+          <b>logback</b>:全方位记录日志
+      </p>
+      <span>更多技术应用 - <b>...</b></span>
+      </div>
+      </div>
+  </div>
+
+   <!-- Indicators -->
+   	<ol class="carousel-indicators">
+    <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+  	</ol>
+  	<!-- Indicators -->
+  </div>
+
+
+
+    </div>
+  </div>
+
+
+<!-- team -->
+<!--<h3 class="text-center  wowload fadeInUp">Our team</h3>-->
+<!--<p class="text-center  wowload fadeInLeft">Our creative team that is making everything possible</p>-->
+<!--<div class="row grid team  wowload fadeInUpBig">	-->
+	<!--<div class=" col-sm-3 col-xs-6">-->
+	<!--<figure class="effect-chico">-->
+        <!--<img src="images/team/8.jpg" alt="img01" class="img-responsive" />-->
+        <!--<figcaption>-->
+            <!--<p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            -->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--</div>-->
+
+    <!--<div class=" col-sm-3 col-xs-6">-->
+	<!--<figure class="effect-chico">-->
+        <!--<img src="images/team/10.jpg" alt="img01"/>-->
+        <!--<figcaption>            -->
+            <!--<p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            -->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--</div>-->
+
+    <!--<div class=" col-sm-3 col-xs-6">-->
+	<!--<figure class="effect-chico">-->
+        <!--<img src="images/team/12.jpg" alt="img01"/>-->
+        <!--<figcaption>-->
+            <!--<p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>          -->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--</div>-->
+
+    <!--<div class=" col-sm-3 col-xs-6">-->
+	<!--<figure class="effect-chico">-->
+        <!--<img src="images/team/17.jpg" alt="img01"/>-->
+        <!--<figcaption>-->
+            <!--<p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--</div>-->
+
+ <!---->
+<!--</div>-->
+<!-- team -->
+
+</div>
+
+<!--Contact Starts-->
+<div id="contact" class="spacer">
+
+<div class="container contactform center">
+<h2 class="text-center  wowload fadeInUp">上传您的作品</h2>
+  <div class="row wowload fadeInLeftBig">      
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+
+          <form enctype="multipart/form-data" action="artworks" id="artwork_form", method="post">
+              <div class="form-group">
+                  <label>Preview File Icon</label>
+                  <input id="file-3" type="file" name="file" multiple=false>
+              </div>
+          <!--</form>-->
+
+          <!--<form id="artwork_info">-->
+              <input type="text" required="true" placeholder="作品名称", name="name", id="name">
+              <!--<input type="text" placeholder="Company">-->
+              <textarea rows="5" placeholder="添加作品描述描述", name="description", id="description"></textarea>
+              <button class="btn btn-primary" onclick="newArtwork()"><i class="fa fa-paper-plane"></i> 提交</button>
+          </form>
+
+      </div>
+  </div>
+
+
+
+</div>
+</div>
+<!--Contact Ends-->
+
+
+
+<!-- Footer Starts -->
+<div class="footer text-center spacer">
+<p class="wowload flipInX"><a href="#"><i class="fa fa-facebook fa-2x"></i></a> <a href="#"><i class="fa fa-instagram fa-2x"></i></a> <a href="#"><i class="fa fa-twitter fa-2x"></i></a> <a href="#"><i class="fa fa-flickr fa-2x"></i></a> </p>
+Copyright 2014 Cyrus Creative Studio. All rights reserved.
+</div>
+<!-- # Footer Ends -->
+<a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+
+
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">Title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+
+
+<!-- jquery -->
+<script src="assets/jquery.js"></script>
+
+<!-- wow script -->
+<script src="assets/wow/wow.min.js"></script>
+
+
+<!-- boostrap -->
+<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script src="assets/mobile/touchSwipe.min.js"></script>
+<script src="assets/respond/respond.js"></script>
+
+<!-- gallery -->
+<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+<script src="assets/script.js"></script>
+
+<!-- angular js -->
+<script src="assets/angular.min.js"></script>
+
+<!-- file upload -->
+<link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+<script src="assets/jquery.js" type="text/javascript"></script>
+<script src="js/fileinput.js" type="text/javascript"></script>
+<!--简体中文-->
+<script src="js/locales/zh.js" type="text/javascript"></script>
+<script>
+    $("#file-3").fileinput({
+        showUpload: false,
+        showCaption: false,
+        browseClass: "btn btn-primary btn-lg",
+        fileType: "any",
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+    });
+
+    function newArtwork(){
+        var title = document.getElementById("name").value;
+        if(title != ""){
+            document.getElementById("artwork_form").submit();
+        }
+
+    }
+    var res;
+
+    var app = angular.module('works', []);
+    app.controller('showWorks', function($scope, $http) {
+        $http.get("/artworks/")
+            .then(function(response) {
+                $scope.myworks=response.data.data;
+                res = response;
+            })
+    });
+</script>
+</body>
+</html>

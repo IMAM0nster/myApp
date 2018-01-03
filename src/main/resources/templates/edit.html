@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>编辑</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'/>
+
+<!-- font awesome -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+<!-- bootstrap -->
+<link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap.min.css}" />
+
+<!-- animate.css -->
+<link rel="stylesheet" th:href="@{assets/animate/animate.css}" />
+<link rel="stylesheet" th:href="@{assets/animate/set.css}" />
+
+<!-- gallery -->
+<link rel="stylesheet" th:href="@{/assets/gallery/blueimp-gallery.min.css}" />
+
+<!-- favicon -->
+<link rel="shortcut icon" th:href="@{/images/favicon.ico}" type="image/x-icon" />
+<link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon" />
+
+
+<link rel="stylesheet" th:href="@{/assets/style.css}" />
+
+</head>
+
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand" href="#home"><img th:src="@{/images/logo.png}" alt="logo" /></a>
+              <!-- #Logo Ends -->
+
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                 <li class="active"><a href="../">返回</a></li>
+                  <li><a href="#about">使用说明</a> </li>
+                 <li ><a href="#contact">编辑作品</a></li>
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- #Header Starts -->
+
+<!-- Cirlce Starts -->
+<div id="about"  class="container spacer about">
+    <h2 class="text-center wowload fadeInUp">使用说明</h2>
+    <div class="row">
+        <div class="col-sm-6 wowload fadeInLeft">
+            <h4><i class="fa fa-paint-brush"></i> 使用</h4>
+            <p>请在下面的表单中输入您希望更新的作品名称以及描述。<br/>
+                （在登陆状态执行以上操作）</p>
+
+
+        </div>
+        <div class="col-sm-6 wowload fadeInRight">
+            <h4><i class="fa fa-code"></i> 其他 </h4>
+            <p>除非您是管理员，否则您没有权限删除并非您上传的照片
+            <br/>
+            目前暂时无法直接修改图片，如果您希望修改图片，建议直接删除原先的图片，并添加一张新图片</p>
+        </div>
+    </div>
+
+    <div class="process">
+        <h3 class="text-center wowload fadeInUp">Process</h3>
+        <ul class="row text-center list-inline  wowload bounceInUp">
+            <li>
+                <span><i class="fa fa-history"></i><b>Research</b></span>
+            </li>
+            <li>
+                <span><i class="fa fa-puzzle-piece"></i><b>Plan</b></span>
+            </li>
+            <li>
+                <span><i class="fa fa-database"></i><b>Develop</b></span>
+            </li>
+            <li>
+                <span><i class="fa fa-magic"></i><b>Integration</b></span>
+            </li>
+            <li>
+                <span><i class="fa fa-cloud-upload"></i><b>Deliver</b></span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- #Cirlce Ends -->
+
+
+
+<!-- About Starts -->
+<div class="highlight-info">
+    <div class="overlay spacer">
+        <div class="container">
+            <div class="row text-center  wowload fadeInDownBig">
+                <div class="col-sm-3 col-xs-6">
+                    <i class="fa fa-smile-o  fa-5x"></i><h4>24 Clients</h4>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <i class="fa fa-rocket  fa-5x"></i><h4>75 Projects</h4>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <i class="fa fa-cloud-download  fa-5x"></i><h4>454 Downloads</h4>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <i class="fa fa-map-marker fa-5x"></i><h4>2 Offices</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Ends -->
+
+
+<!--Contact Starts-->
+<div id="contact" class="spacer">
+
+<div class="container contactform center">
+<h2 class="text-center  wowload fadeInUp">编辑作品</h2>
+  <div class="row wowload fadeInLeftBig">      
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+          <img th:attr="src=${fileUrl}"  class="img-responsive" alt="Responsive image" />
+          <form action="artworks/" id="artwork_form" method="post" th:object="${artwork}">
+
+
+              <input type="hidden" th:value="*{id}" id="artworkId" name="id"/>
+              <input type="hidden" th:value="*{author}" id="author" name="author"/>
+              <br/>
+
+              <input type="text" required="true"  name="name" id="name" th:value="*{name}"/>
+              <!--<input type="text" placeholder="Company">-->
+              <textarea rows="5"  name="description" id="description"
+                        th:text="*{description}"></textarea>
+              <input type="hidden" name="_method" value="PUT" />
+              <button class="btn btn-primary" onclick="update()"><i class="fa fa-paper-plane"></i> 更新</button>
+              <br/>
+          </form>
+
+
+          <button class="btn btn-default" onclick="deleteArtwork()"><i class="fa fa-paper-plane"></i> 删除</button>
+
+
+      </div>
+  </div>
+
+
+
+</div>
+</div>
+<!--Contact Ends-->
+
+
+
+<!-- Footer Starts -->
+<div class="footer text-center spacer">
+<p class="wowload flipInX"><a href="#"><i class="fa fa-facebook fa-2x"></i></a> <a href="#"><i class="fa fa-instagram fa-2x"></i></a> <a href="#"><i class="fa fa-twitter fa-2x"></i></a> <a href="#"><i class="fa fa-flickr fa-2x"></i></a> </p>
+Copyright 2014 Cyrus Creative Studio. All rights reserved.
+</div>
+<!-- # Footer Ends -->
+<a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+
+
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">Title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+
+
+<!-- jquery -->
+<script th:src="@{/assets/jquery.js}"></script>
+
+<!-- wow script -->
+<script th:src="@{/assets/wow/wow.min.js}"></script>
+
+
+<!-- boostrap -->
+<script th:src="@{/assets/bootstrap/js/bootstrap.js}" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script th:src="@{/assets/mobile/touchSwipe.min.js}"></script>
+<script th:src="@{/assets/respond/respond.js}"></script>
+
+<!-- gallery -->
+<script th:src="@{/assets/gallery/jquery.blueimp-gallery.min.js}"></script>
+
+<!-- custom script -->
+<script th:src="@{/assets/script.js}"></script>
+
+<!-- angular js -->
+<script th:src="@{/assets/angular.min.js}"></script>
+
+<script>
+    function update(){
+        document.getElementById("artwork_form").submit();
+    }
+    var artworkId = document.getElementById("artworkId").value;
+
+    function deleteArtwork(){
+        $.ajax({
+            url:"/artworks/"+artworkId,
+            type:"POST",
+            data:{
+                _method:'DELETE',
+            },
+            dataType: "json",
+            success:function (res) {
+                alert("删除成功——即将返回首页");
+                window.history.back(-1);
+            },
+            error:function (res) {
+                alert("删除失败——请确保您有权限删除该作品");
+                window.history.back(-1);
+            }
+        })
+    }
+
+</script>
+</body>
+</html>
